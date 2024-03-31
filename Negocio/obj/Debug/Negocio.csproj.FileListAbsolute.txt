@@ -1,0 +1,27 @@
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel2\Probando errores\Negocio\bin\Debug\Negocio.dll
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel2\Probando errores\Negocio\bin\Debug\Negocio.pdb
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel2\Probando errores\Negocio\bin\Debug\Dominio.dll
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel2\Probando errores\Negocio\bin\Debug\Dominio.pdb
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel2\Probando errores\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel2\Probando errores\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel2\Probando errores\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel2\Probando errores\Negocio\obj\Debug\Negocio.dll
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel2\Probando errores\Negocio\obj\Debug\Negocio.pdb
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel2\TPFinalNivel2_Boffa\Negocio\bin\Debug\Negocio.dll
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel2\TPFinalNivel2_Boffa\Negocio\bin\Debug\Negocio.pdb
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel2\TPFinalNivel2_Boffa\Negocio\bin\Debug\Dominio.dll
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel2\TPFinalNivel2_Boffa\Negocio\bin\Debug\Dominio.pdb
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel2\TPFinalNivel2_Boffa\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel2\TPFinalNivel2_Boffa\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel2\TPFinalNivel2_Boffa\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel2\TPFinalNivel2_Boffa\Negocio\obj\Debug\Negocio.dll
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel2\TPFinalNivel2_Boffa\Negocio\obj\Debug\Negocio.pdb
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel3\TPFinalNivel3_Boffa\Negocio\bin\Debug\Negocio.dll
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel3\TPFinalNivel3_Boffa\Negocio\bin\Debug\Negocio.pdb
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel3\TPFinalNivel3_Boffa\Negocio\bin\Debug\Dominio.dll
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel3\TPFinalNivel3_Boffa\Negocio\bin\Debug\Dominio.pdb
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel3\TPFinalNivel3_Boffa\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel3\TPFinalNivel3_Boffa\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel3\TPFinalNivel3_Boffa\Negocio\obj\Debug\Negocio.csproj.Up2Date
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel3\TPFinalNivel3_Boffa\Negocio\obj\Debug\Negocio.dll
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel3\TPFinalNivel3_Boffa\Negocio\obj\Debug\Negocio.pdb

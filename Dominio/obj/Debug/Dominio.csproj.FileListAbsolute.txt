@@ -1,0 +1,12 @@
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel2\Probando errores\Dominio\bin\Debug\Dominio.dll
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel2\Probando errores\Dominio\bin\Debug\Dominio.pdb
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel2\Probando errores\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel2\Probando errores\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel2\Probando errores\Dominio\obj\Debug\Dominio.dll
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel2\Probando errores\Dominio\obj\Debug\Dominio.pdb
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel3\TPFinalNivel3_Boffa\Dominio\bin\Debug\Dominio.dll
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel3\TPFinalNivel3_Boffa\Dominio\bin\Debug\Dominio.pdb
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel3\TPFinalNivel3_Boffa\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel3\TPFinalNivel3_Boffa\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel3\TPFinalNivel3_Boffa\Dominio\obj\Debug\Dominio.dll
+D:\PROGRAMACION\MaxiPrograma\CursoC#Nivel3\TPFinalNivel3_Boffa\Dominio\obj\Debug\Dominio.pdb
