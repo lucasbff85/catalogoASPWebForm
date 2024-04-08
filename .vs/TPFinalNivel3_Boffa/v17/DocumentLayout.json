@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4F54C67D-8146-46B5-BFC6-0C91D6AB2611}|Presentacion\\Presentacion.csproj|d:\\programacion\\maxiprograma\\cursoc#nivel3\\tpfinalnivel3_boffa\\presentacion\\masterpagecatalogo.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F54C67D-8146-46B5-BFC6-0C91D6AB2611}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\masterpagecatalogo.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4F54C67D-8146-46B5-BFC6-0C91D6AB2611}|Presentacion\\Presentacion.csproj|d:\\programacion\\maxiprograma\\cursoc#nivel3\\tpfinalnivel3_boffa\\presentacion\\masterpagecatalogo.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
       "RelativeMoniker": "D:0:0:{4F54C67D-8146-46B5-BFC6-0C91D6AB2611}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\masterpagecatalogo.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F54C67D-8146-46B5-BFC6-0C91D6AB2611}|Presentacion\\Presentacion.csproj|d:\\programacion\\maxiprograma\\cursoc#nivel3\\tpfinalnivel3_boffa\\presentacion\\miperfil.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F54C67D-8146-46B5-BFC6-0C91D6AB2611}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\miperfil.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F54C67D-8146-46B5-BFC6-0C91D6AB2611}|Presentacion\\Presentacion.csproj|d:\\programacion\\maxiprograma\\cursoc#nivel3\\tpfinalnivel3_boffa\\presentacion\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F54C67D-8146-46B5-BFC6-0C91D6AB2611}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F54C67D-8146-46B5-BFC6-0C91D6AB2611}|Presentacion\\Presentacion.csproj|d:\\programacion\\maxiprograma\\cursoc#nivel3\\tpfinalnivel3_boffa\\presentacion\\miperfil.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{4F54C67D-8146-46B5-BFC6-0C91D6AB2611}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\miperfil.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F54C67D-8146-46B5-BFC6-0C91D6AB2611}|Presentacion\\Presentacion.csproj|d:\\programacion\\maxiprograma\\cursoc#nivel3\\tpfinalnivel3_boffa\\presentacion\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{4F54C67D-8146-46B5-BFC6-0C91D6AB2611}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,6 +39,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MasterPageCatalogo.Master.cs",
+              "DocumentMoniker": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\Presentacion\\MasterPageCatalogo.Master.cs",
+              "RelativeDocumentMoniker": "Presentacion\\MasterPageCatalogo.Master.cs",
+              "ToolTip": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\Presentacion\\MasterPageCatalogo.Master.cs",
+              "RelativeToolTip": "Presentacion\\MasterPageCatalogo.Master.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T21:11:01.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.aspx.cs",
+              "DocumentMoniker": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\Presentacion\\Login.aspx.cs",
+              "RelativeDocumentMoniker": "Presentacion\\Login.aspx.cs",
+              "ToolTip": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\Presentacion\\Login.aspx.cs",
+              "RelativeToolTip": "Presentacion\\Login.aspx.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAD4vxkAAABhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T21:00:56.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MasterPageCatalogo.Master",
               "DocumentMoniker": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\Presentacion\\MasterPageCatalogo.Master",
               "RelativeDocumentMoniker": "Presentacion\\MasterPageCatalogo.Master",
@@ -26,7 +72,46 @@
               "RelativeToolTip": "Presentacion\\MasterPageCatalogo.Master",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-03-31T20:24:18.967Z",
+              "WhenOpened": "2024-04-08T21:00:04.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MiPerfil.aspx.cs",
+              "DocumentMoniker": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\Presentacion\\MiPerfil.aspx.cs",
+              "RelativeDocumentMoniker": "Presentacion\\MiPerfil.aspx.cs",
+              "ToolTip": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\Presentacion\\MiPerfil.aspx.cs",
+              "RelativeToolTip": "Presentacion\\MiPerfil.aspx.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAD4v0AAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T19:49:27.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MiPerfil.aspx",
+              "DocumentMoniker": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\Presentacion\\MiPerfil.aspx",
+              "RelativeDocumentMoniker": "Presentacion\\MiPerfil.aspx",
+              "ToolTip": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\Presentacion\\MiPerfil.aspx",
+              "RelativeToolTip": "Presentacion\\MiPerfil.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-04-08T19:12:52.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Default.aspx",
+              "DocumentMoniker": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\Presentacion\\Default.aspx",
+              "RelativeDocumentMoniker": "Presentacion\\Default.aspx",
+              "ToolTip": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\Presentacion\\Default.aspx",
+              "RelativeToolTip": "Presentacion\\Default.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-04-08T16:37:07.831Z",
               "EditorCaption": ""
             }
           ]
