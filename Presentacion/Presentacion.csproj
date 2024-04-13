@@ -69,7 +69,7 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="Detalle.aspx" />
-    <Content Include="EditarCatalogo.aspx" />
+    <Content Include="EdicionCatalogo.aspx" />
     <Content Include="Error.aspx" />
     <Content Include="Favoritos.aspx" />
     <Content Include="Global.asax" />
@@ -77,6 +77,7 @@
     <Content Include="Login.aspx" />
     <Content Include="MiPerfil.aspx" />
     <Content Include="Registro.aspx" />
+    <Content Include="Scripts.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -94,12 +95,12 @@
     <Compile Include="Detalle.aspx.designer.cs">
       <DependentUpon>Detalle.aspx</DependentUpon>
     </Compile>
-    <Compile Include="EditarCatalogo.aspx.cs">
-      <DependentUpon>EditarCatalogo.aspx</DependentUpon>
+    <Compile Include="EdicionCatalogo.aspx.cs">
+      <DependentUpon>EdicionCatalogo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="EditarCatalogo.aspx.designer.cs">
-      <DependentUpon>EditarCatalogo.aspx</DependentUpon>
+    <Compile Include="EdicionCatalogo.aspx.designer.cs">
+      <DependentUpon>EdicionCatalogo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Error.aspx.cs">
       <DependentUpon>Error.aspx</DependentUpon>

@@ -32,9 +32,9 @@ namespace Negocio
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
                     if (!(datos.Lector["ImagenUrl"] is DBNull))
                         aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
-                    
-                    aux.Precio = Math.Round(Convert.ToDecimal(datos.Lector["Precio"]), 2);
 
+                    //aux.Precio = Math.Round(Convert.ToDecimal(datos.Lector["Precio"]), 2);
+                    aux.Precio = (decimal)datos.Lector["Precio"];
                     aux.Marca = new Marca();
                     aux.Marca.Id = (int)datos.Lector["IdMarca"];
                     aux.Marca.Descripcion = (string)datos.Lector["Marca"];

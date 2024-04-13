@@ -7,6 +7,7 @@
             font-size: 12px;
         }
     </style>
+    <script src="Scripts.js"></script>
     <script>
         function validarApellido() {
             const txtApellido = document.getElementById("txtApellido");

@@ -30,7 +30,7 @@
                             <a class="nav-link" href="Favoritos.aspx">Favoritos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="EditarCatalogo.aspx">Edición de Catálogo</a>
+                            <a class="nav-link" href="EdicionCatalogo.aspx">Edición de Catálogo</a>
                         </li>
 
                     </ul>
