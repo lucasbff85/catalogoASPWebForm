@@ -13,14 +13,21 @@ namespace Negocio
 {
     public class ArticuloNegocio
     {
-        public List<Articulo> listar()
+        public List<Articulo> listar(string id = "")
         {
             List<Articulo> lista = new List<Articulo>();
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                datos.setearConsulta("select Codigo, Nombre, M.Descripcion Marca,C.Descripcion Categoria, A.Descripcion,  Precio, ImagenUrl, A.IdMarca, A.IdCategoria, A.Id from ARTICULOS A, MARCAS M, CATEGORIAS C where M.Id=A.IdMarca and C.Id=A.IdCategoria and Precio>0");
+                string consulta = "select Codigo, Nombre, M.Descripcion Marca,C.Descripcion Categoria, A.Descripcion,  Precio, ImagenUrl, A.IdMarca, A.IdCategoria, A.Id from ARTICULOS A, MARCAS M, CATEGORIAS C where M.Id=A.IdMarca and C.Id=A.IdCategoria and Precio>0";
+                if (!string.IsNullOrEmpty(id))
+                {
+                    consulta += " and A.Id = @Id";
+                    datos.setearParametro("@Id", id);
+                }
+
+                datos.setearConsulta(consulta);
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())

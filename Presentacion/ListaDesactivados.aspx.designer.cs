@@ -11,61 +11,61 @@ namespace Presentacion
 {
 
 
-    public partial class EditarCatalogo
+    public partial class ListaDesactivados
     {
 
         /// <summary>
-        /// txtFiltro control.
+        /// tituloDesactivados control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFiltro;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tituloDesactivados;
 
         /// <summary>
-        /// chkAvanzado control.
+        /// dgvDesactivados control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkAvanzado;
+        protected global::System.Web.UI.WebControls.GridView dgvDesactivados;
 
         /// <summary>
-        /// lblCampo control.
+        /// txtNuevoPrecio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCampo;
+        protected global::System.Web.UI.WebControls.TextBox txtNuevoPrecio;
 
         /// <summary>
-        /// ddlCampo control.
+        /// btnCancelar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCampo;
+        protected global::System.Web.UI.WebControls.Button btnCancelar;
 
         /// <summary>
-        /// ddlCriterio control.
+        /// btnAceptar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCriterio;
+        protected global::System.Web.UI.WebControls.Button btnAceptar;
 
         /// <summary>
-        /// dgvArticulos control.
+        /// lblSuspendidos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView dgvArticulos;
+        protected global::System.Web.UI.WebControls.Label lblSuspendidos;
     }
 }

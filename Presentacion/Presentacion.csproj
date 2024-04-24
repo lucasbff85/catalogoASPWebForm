@@ -68,16 +68,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
-    <Content Include="Detalle.aspx" />
-    <Content Include="EdicionCatalogo.aspx" />
     <Content Include="Error.aspx" />
     <Content Include="Favoritos.aspx" />
+    <Content Include="FormularioArticulo.aspx" />
     <Content Include="Global.asax" />
     <Content Include="ListaArticulos.aspx" />
+    <Content Include="ListaDesactivados.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="MiPerfil.aspx" />
     <Content Include="Registro.aspx" />
     <Content Include="Scripts.js" />
+    <Content Include="Styles.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -87,20 +88,6 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Detalle.aspx.cs">
-      <DependentUpon>Detalle.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Detalle.aspx.designer.cs">
-      <DependentUpon>Detalle.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="EdicionCatalogo.aspx.cs">
-      <DependentUpon>EdicionCatalogo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EdicionCatalogo.aspx.designer.cs">
-      <DependentUpon>EdicionCatalogo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Error.aspx.cs">
       <DependentUpon>Error.aspx</DependentUpon>
@@ -116,6 +103,13 @@
     <Compile Include="Favoritos.aspx.designer.cs">
       <DependentUpon>Favoritos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FormularioArticulo.aspx.cs">
+      <DependentUpon>FormularioArticulo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormularioArticulo.aspx.designer.cs">
+      <DependentUpon>FormularioArticulo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -125,6 +119,13 @@
     </Compile>
     <Compile Include="ListaArticulos.aspx.designer.cs">
       <DependentUpon>ListaArticulos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListaDesactivados.aspx.cs">
+      <DependentUpon>ListaDesactivados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListaDesactivados.aspx.designer.cs">
+      <DependentUpon>ListaDesactivados.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
