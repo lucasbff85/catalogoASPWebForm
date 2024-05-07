@@ -15,30 +15,12 @@ namespace Presentacion
     {
 
         /// <summary>
-        /// dgvFavoritos control.
+        /// repRepetidor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView dgvFavoritos;
-
-        /// <summary>
-        /// btnDetalle control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDetalle;
-
-        /// <summary>
-        /// btnEliminarFavorito control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEliminarFavorito;
+        protected global::System.Web.UI.WebControls.Repeater repRepetidor;
     }
 }

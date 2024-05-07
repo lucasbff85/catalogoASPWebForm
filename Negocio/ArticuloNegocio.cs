@@ -8,6 +8,7 @@ using Dominio;
 using System.Collections;
 using System.Globalization;
 using System.Windows.Forms;
+using static System.Net.WebRequestMethods;
 
 namespace Negocio
 {
@@ -37,9 +38,9 @@ namespace Negocio
                     aux.Codigo = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
-                    if (!(datos.Lector["ImagenUrl"] is DBNull))
-                        aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
-
+                    //if (!(datos.Lector["ImagenUrl"] is DBNull))
+                    //aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
+                    aux.UrlImagen = datos.Lector["ImagenUrl"] is DBNull ? "https://www.nycourts.gov/courts/ad4/assets/Placeholder.png" : (string)datos.Lector["ImagenUrl"];
                     //aux.Precio = Math.Round(Convert.ToDecimal(datos.Lector["Precio"]), 2);
                     aux.Precio = (decimal)datos.Lector["Precio"];
                     aux.Marca = new Marca();
@@ -82,9 +83,9 @@ namespace Negocio
                     aux.Codigo = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
-                    if (!(datos.Lector["ImagenUrl"] is DBNull))
-                        aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
-
+                    //if (!(datos.Lector["ImagenUrl"] is DBNull))
+                    //aux.UrlImagen = (string)datos.Lector["ImagenUrl"];
+                    aux.UrlImagen = datos.Lector["ImagenUrl"] is DBNull ? "https://www.nycourts.gov/courts/ad4/assets/Placeholder.png" : (string)datos.Lector["ImagenUrl"];
                     aux.Precio = Math.Round(Convert.ToDecimal(datos.Lector["Precio"]), 2);
 
                     aux.Marca = new Marca();

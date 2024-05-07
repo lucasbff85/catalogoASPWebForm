@@ -35,6 +35,11 @@ namespace Presentacion
                     Session.Add("usuario", usuario);
                     Response.Redirect("MiPerfil.aspx", false);
                 }
+                else
+                {
+                    Session.Add("error", "Usuario o Contraseña incorrectos");
+                    Response.Redirect("Error.aspx");
+                }
             }
             catch (System.Threading.ThreadAbortException ex){}
             catch(Exception ex)

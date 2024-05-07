@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4F54C67D-8146-46B5-BFC6-0C91D6AB2611}|Presentacion\\Presentacion.csproj|D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\presentacion\\favoritos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F54C67D-8146-46B5-BFC6-0C91D6AB2611}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\favoritos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F54C67D-8146-46B5-BFC6-0C91D6AB2611}|Presentacion\\Presentacion.csproj|D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\presentacion\\formularioarticulo.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{4F54C67D-8146-46B5-BFC6-0C91D6AB2611}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\formularioarticulo.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F54C67D-8146-46B5-BFC6-0C91D6AB2611}|Presentacion\\Presentacion.csproj|D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\presentacion\\listaarticulos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F54C67D-8146-46B5-BFC6-0C91D6AB2611}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\listaarticulos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F54C67D-8146-46B5-BFC6-0C91D6AB2611}|Presentacion\\Presentacion.csproj|d:\\programacion\\maxiprograma\\cursoc#nivel3\\tpfinalnivel3_boffa\\presentacion\\formularioarticulo.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F54C67D-8146-46B5-BFC6-0C91D6AB2611}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\formularioarticulo.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A9B35CE-1F42-45A7-A250-805997B489C2}|Negocio\\Negocio.csproj|d:\\programacion\\maxiprograma\\cursoc#nivel3\\tpfinalnivel3_boffa\\negocio\\validaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A9B35CE-1F42-45A7-A250-805997B489C2}|Negocio\\Negocio.csproj|solutionrelative:negocio\\validaciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F54C67D-8146-46B5-BFC6-0C91D6AB2611}|Presentacion\\Presentacion.csproj|d:\\programacion\\maxiprograma\\cursoc#nivel3\\tpfinalnivel3_boffa\\presentacion\\favoritos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{4F54C67D-8146-46B5-BFC6-0C91D6AB2611}|Presentacion\\Presentacion.csproj|solutionrelative:presentacion\\favoritos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A9B35CE-1F42-45A7-A250-805997B489C2}|Negocio\\Negocio.csproj|d:\\programacion\\maxiprograma\\cursoc#nivel3\\tpfinalnivel3_boffa\\negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A9B35CE-1F42-45A7-A250-805997B489C2}|Negocio\\Negocio.csproj|solutionrelative:negocio\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Favoritos.aspx.cs",
-              "DocumentMoniker": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\Presentacion\\Favoritos.aspx.cs",
-              "RelativeDocumentMoniker": "Presentacion\\Favoritos.aspx.cs",
-              "ToolTip": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\Presentacion\\Favoritos.aspx.cs",
-              "RelativeToolTip": "Presentacion\\Favoritos.aspx.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAxwBwAAABJAAAA",
+              "DocumentIndex": 3,
+              "Title": "Favoritos.aspx",
+              "DocumentMoniker": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\Presentacion\\Favoritos.aspx",
+              "RelativeDocumentMoniker": "Presentacion\\Favoritos.aspx",
+              "ToolTip": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\Presentacion\\Favoritos.aspx",
+              "RelativeToolTip": "Presentacion\\Favoritos.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-07T17:26:21.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccesoDatos.cs",
+              "DocumentMoniker": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\Negocio\\AccesoDatos.cs",
+              "RelativeDocumentMoniker": "Negocio\\AccesoDatos.cs",
+              "ToolTip": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\Negocio\\AccesoDatos.cs",
+              "RelativeToolTip": "Negocio\\AccesoDatos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T14:28:01.134Z",
+              "WhenOpened": "2024-05-07T16:46:28.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Validaciones.cs",
+              "DocumentMoniker": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\Negocio\\Validaciones.cs",
+              "RelativeDocumentMoniker": "Negocio\\Validaciones.cs",
+              "ToolTip": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\Negocio\\Validaciones.cs",
+              "RelativeToolTip": "Negocio\\Validaciones.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD8AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T16:35:46.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormularioArticulo.aspx",
+              "DocumentMoniker": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\Presentacion\\FormularioArticulo.aspx",
+              "RelativeDocumentMoniker": "Presentacion\\FormularioArticulo.aspx",
+              "ToolTip": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\Presentacion\\FormularioArticulo.aspx",
+              "RelativeToolTip": "Presentacion\\FormularioArticulo.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-06T21:32:28.841Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ListaArticulos.aspx.cs",
-              "DocumentMoniker": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\Presentacion\\ListaArticulos.aspx.cs",
-              "RelativeDocumentMoniker": "Presentacion\\ListaArticulos.aspx.cs",
-              "ToolTip": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\Presentacion\\ListaArticulos.aspx.cs",
-              "RelativeToolTip": "Presentacion\\ListaArticulos.aspx.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkBAAABAAAA",
+              "Title": "FormularioArticulo.aspx.cs",
+              "DocumentMoniker": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\Presentacion\\FormularioArticulo.aspx.cs",
+              "RelativeDocumentMoniker": "Presentacion\\FormularioArticulo.aspx.cs",
+              "ToolTip": "D:\\PROGRAMACION\\MaxiPrograma\\CursoC#Nivel3\\TPFinalNivel3_Boffa\\Presentacion\\FormularioArticulo.aspx.cs",
+              "RelativeToolTip": "Presentacion\\FormularioArticulo.aspx.cs",
+              "ViewState": "AQIAAGQAAAAAAAAAAAAAAHwAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-15T22:19:21.129Z",
+              "WhenOpened": "2024-05-06T14:25:02.701Z",
               "EditorCaption": ""
             }
           ]

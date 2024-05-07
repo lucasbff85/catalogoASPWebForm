@@ -1,6 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageCatalogo.Master" AutoEventWireup="true" CodeBehind="FormularioArticulo.aspx.cs" Inherits="Presentacion.FormularioArticulo" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+     <script>
+    function ImagenDefecto()
+    {
+        this.onerror=null; 
+        this.src = 'https://img.freepik.com/vector-premium/icono-marco-fotos-foto-vacia-blanco-vector-sobre-fondo-transparente-aislado-eps-10_399089-1290.jpg?w=740';
+    }
+     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="scriptManager1" runat="server" />
@@ -41,7 +48,7 @@
                 <ContentTemplate>
                     <label for="txtImagenUrl" class="form-label">Url Imagen</label>
                     <asp:TextBox ID="txtImagenUrl" CssClass="form-control" runat="server" AutoPostBack="true" OnTextChanged="txtImagenUrl_TextChanged" />
-                    <asp:Image ImageUrl="imageurl" Width="60%" ID="imgArticulo" runat="server" />
+                    <asp:Image onerror="this.onerror=null; this.src = 'https://www.nycourts.gov/courts/ad4/assets/Placeholder.png'" Width="60%" ID="imgArticulo" runat="server" />
                 </ContentTemplate>
             </asp:UpdatePanel>
         </div>

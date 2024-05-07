@@ -9,8 +9,8 @@
             Dale un vistazo a nuestro catálogo, <a href="Registro.aspx">registra tu perfil</a>  y seguí de cerca tus productos favoritos.
         </div>
         <div class="col-md-4">
-            <img src="~/Images/a.png" alt="Alternate Text" />
-            <%--no se como subir esa imagen--%> 
+            <img src="/Images/a.png" alt="Alternate Text" />
+            <%--ruta absoluta para subir esa imagen--%> 
         </div>
     </div>
 

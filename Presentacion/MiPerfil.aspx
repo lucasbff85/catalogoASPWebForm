@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageCatalogo.Master" AutoEventWireup="true" CodeBehind="MiPerfil.aspx.cs" Inherits="Presentacion.MiPerfil" %>
+﻿ <%@ Page Title="" Language="C#" MasterPageFile="~/MasterPageCatalogo.Master" AutoEventWireup="true" CodeBehind="MiPerfil.aspx.cs" Inherits="Presentacion.MiPerfil" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
@@ -58,7 +58,7 @@
                 <label class="form-label">Imagen de Perfil</label>
                 <input type="file" id="txtImagen" runat="server" class="form-control" />
             </div>
-            <asp:Image ImageUrl="" runat="server" ID="imgNuevoPerfil"
+            <asp:Image ImageUrl="https://simg.nicepng.com/png/small/202-2022264_usuario-annimo-usuario-annimo-user-icon-png-transparent.png" runat="server" ID="imgNuevoPerfil"
                 CssClass="img-fluid mb-3" />
         </div>
     </div>

@@ -25,7 +25,7 @@ namespace Presentacion
                         txtNombre.Text = user.Nombre;
                         txtApellido.Text = user.Apellido;
                         if(!string.IsNullOrEmpty(user.UrlImagenPerfil))
-                            imgNuevoPerfil.ImageUrl = "~/Images"+user.UrlImagenPerfil;
+                            imgNuevoPerfil.ImageUrl = "~/Images/"+user.UrlImagenPerfil;
                     }
                 }
             }
