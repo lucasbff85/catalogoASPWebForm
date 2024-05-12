@@ -2,7 +2,9 @@
 using Negocio;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Policy;
 using System.Web;
 using System.Web.UI;
@@ -42,6 +44,7 @@ namespace Presentacion
                     ddlMarca.Enabled = true;
                     txtPrecio.Enabled = true;
                     txtDescripcion.Enabled = true;
+                    
                 }
 
                 //SI QUEREMOS EL DETALLE DE UN ARTICULO
@@ -65,7 +68,7 @@ namespace Presentacion
 
                 try
                 {
-                    //CARGO TODO
+                    //CARGO LOS DROPDOWN
 
                     MarcaNegocio marcaNegocio = new MarcaNegocio();
                     ddlMarca.DataSource = marcaNegocio.listar();
@@ -98,6 +101,10 @@ namespace Presentacion
                         ddlCategoria.SelectedValue = seleccionado.Categoria.Id.ToString();
                         ddlMarca.SelectedValue = seleccionado.Marca.Id.ToString();
                         imgArticulo.ImageUrl = seleccionado.UrlImagen;
+                        if (!string.IsNullOrEmpty(seleccionado.UrlImagen)){
+                            txtImagenUrl.Text = seleccionado.UrlImagen;
+                        }
+                            
 
                         //if ((!string.IsNullOrEmpty(seleccionado.UrlImagen) && Validaciones.IsImageUrl(seleccionado.UrlImagen)))
                         //{
@@ -112,8 +119,8 @@ namespace Presentacion
                 catch (Exception ex)
                 {
 
-                    Session.Add("error", ex.ToString());
-                    Response.Redirect("Error.aspx", false );
+                    Session.Add("error", Seguridad.manejoError(ex));
+                    Response.Redirect("Error.aspx", false);
                 }
             }
 
@@ -136,6 +143,7 @@ namespace Presentacion
             {
                 Articulo nuevo = new Articulo();
                 ArticuloNegocio negocio = new ArticuloNegocio();
+                Validaciones validar = new Validaciones();
                 nuevo.Nombre = txtNombre.Text;
                 nuevo.Codigo = txtCodigo.Text;
                 nuevo.UrlImagen = txtImagenUrl.Text;
@@ -145,6 +153,24 @@ namespace Presentacion
                 nuevo.Categoria = new Categoria();
                 nuevo.Categoria.Id = int.Parse(ddlCategoria.SelectedValue);
 
+                //EL PRECIO
+
+                txtPrecio.Text = txtPrecio.Text.Replace(',', '.');
+
+                if (!decimal.TryParse(txtPrecio.Text, NumberStyles.Float, CultureInfo.InvariantCulture, out decimal nuevoPrecio) || validar.validarPrecio(txtPrecio.Text))
+                {
+                    lblMensaje.Text = "El formato de precio no es válido";
+                    lblMensaje.Visible = true;
+                    return;
+                }
+
+                nuevo.Precio = decimal.Parse(txtPrecio.Text);
+
+                decimal precio = nuevoPrecio;
+                nuevo.Precio = precio;
+
+
+
 
                 if (Request.QueryString["id"] != null)
                 {
@@ -153,12 +179,14 @@ namespace Presentacion
                 }
                 else
                     negocio.agregar(nuevo);
+
+                Response.Redirect("ListaArticulos.aspx", false);
+
             }
             catch (Exception ex)
             {
-
-                Session.Add("error", ex.ToString());
-                Response.Redirect("Error.aspx");
+                Session.Add("error", Seguridad.manejoError(ex));
+                Response.Redirect("Error.aspx", false);
             }
         }
     }

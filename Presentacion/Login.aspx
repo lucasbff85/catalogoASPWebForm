@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    
+
 
     <div class="row">
         <div class="col-4"></div>
@@ -14,10 +14,14 @@
             <div class="mb-3">
                 <asp:Label Text="Email" CssClass="form-label" runat="server" />
                 <asp:TextBox runat="server" ID="txtEmail" CssClass="form-control" />
+                <asp:RequiredFieldValidator ForeColor="Red" Font-Bold="true" Font-Italic="true" Font-Size="12pt" ErrorMessage="Por favor ingresa tu email." ControlToValidate="txtEmail" runat="server" />
+                <asp:RegularExpressionValidator ForeColor="Red" Font-Bold="true" Font-Italic="true" Font-Size="12pt" ErrorMessage="Email inválido." ValidationExpression=".*@.*" ControlToValidate="txtEmail" runat="server" />
+
             </div>
             <div class="mb-3">
                 <asp:Label Text="Password" CssClass="form-label" runat="server" />
-                <asp:TextBox runat="server" ID="txtPassword" CssClass="form-control" TextMode="Password"/>
+                <asp:TextBox runat="server" ID="txtPassword" CssClass="form-control" TextMode="Password" />
+                <asp:RequiredFieldValidator ForeColor="Red" Font-Bold="true" Font-Italic="true" Font-Size="12pt" ErrorMessage="Por favor ingresa tu contraseña." ControlToValidate="txtPassword" runat="server" />
             </div>
             <asp:Button Text="Ingresar" CssClass=" btn btn-primary" ID="btnLogin" OnClick="btnLogin_Click" runat="server" />
             <a href="/">Cancelar</a>

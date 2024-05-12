@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.ModelBinding;
 using Dominio;
 
 namespace Negocio
@@ -23,6 +24,10 @@ namespace Negocio
             return usuario != null ? usuario.Admin : false;
         }
 
-
+        public static string manejoError(Exception error)
+        {
+           string mensajeError = error.ToString();
+            return mensajeError;
+        }
     }
 }

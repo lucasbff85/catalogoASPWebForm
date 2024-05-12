@@ -29,8 +29,8 @@ namespace Presentacion
             catch (Exception ex)
             {
 
-                Session.Add("error", ex.ToString());
-                Response.Redirect("Error.aspx");
+                Session.Add("error", Seguridad.manejoError(ex));
+                Response.Redirect("Error.aspx", false);
             }
         }
 
@@ -80,9 +80,8 @@ namespace Presentacion
             }
             catch (Exception ex)
             {
-
-                Session.Add("error", ex.ToString());
-                Response.Redirect("Error.aspx");
+                Session.Add("error", Seguridad.manejoError(ex));
+                Response.Redirect("Error.aspx", false);
             }
              
         }

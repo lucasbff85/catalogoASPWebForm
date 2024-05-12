@@ -9,30 +9,32 @@
     </style>
     <script src="Scripts.js"></script>
     <script>
-        function validarApellido() {
+        function validar() {
             const txtApellido = document.getElementById("txtApellido");
+            const txtNombre = document.getElementById("txtNombre");
+
+
             if (txtApellido.value == "") {
                 txtApellido.classList.add("is-invalid");
                 txtApellido.classList.remove("is-valid");
                 return false;
+            } else {
+                txtApellido.classList.remove("is-invalid");
+                txtApellido.classList.add("is-valid");
             }
-            txtApellido.classList.remove("is-invalid");
-            txtApellido.classList.add("is-valid");
-            return true;
-        }
-
-        function validarNombre() {
-            const txtNombre = document.getElementById("txtNombre");
             if (txtNombre.value == "") {
                 txtNombre.classList.add("is-invalid");
                 txtNombre.classList.remove("is-valid");
                 return false;
+            } else {
+                txtNombre.classList.remove("is-invalid");
+                txtNombre.classList.add("is-valid");
             }
-            txtNombre.classList.remove("is-invalid");
-            txtNombre.classList.add("is-valid");
+  
             return true;
         }
 
+       
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -65,6 +67,16 @@
     <div class="row">
         <div class="col-md-4">
             <asp:Button Text="Guardar" CssClass="btn btn-primary" ID="btnGuardar" OnClientClick="return validar()" OnClick="btnGuardar_Click" runat="server" />
+            <asp:Button Text="Eliminar mi usuario" CssClass="btn btn-danger" ID="btnEliminarUsuario" OnClick="btnEliminarUsuario_Click" runat="server" />
         </div>
+        <%if (EliminarUsuario) {  %>
+        <div class="row">
+            <div class="col-md-4">
+                <asp:CheckBox Text="Confirmar Eliminación" ID="chkConfirmarEliminacion" runat="server" />
+                <asp:Button Text="Eliminar" ID="btnEliminar" OnClick="btnEliminar_Click" runat="server" />
+            </div>
+        </div>
+        <% }%>
+
     </div>
 </asp:Content>

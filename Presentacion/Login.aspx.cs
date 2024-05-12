@@ -18,11 +18,17 @@ namespace Presentacion
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+
+
             Usuario usuario = new Usuario();
             UsuarioNegocio negocio = new UsuarioNegocio();
 
             try
             {
+                Page.Validate();
+                if(!Page.IsValid)
+                    return;
+
                 if(string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(txtPassword.Text)){
                     Session.Add("error", "Debes completar ambos campos.");
                     Response.Redirect("Error.aspx");
@@ -38,14 +44,14 @@ namespace Presentacion
                 else
                 {
                     Session.Add("error", "Usuario o Contraseña incorrectos");
-                    Response.Redirect("Error.aspx");
+                    Response.Redirect("Error.aspx",false);
                 }
             }
             catch (System.Threading.ThreadAbortException ex){}
             catch(Exception ex)
             {
-               Session.Add("error", ex.ToString());
-                Response.Redirect("Error.aspx");
+                Session.Add("error", Seguridad.manejoError(ex));
+                Response.Redirect("Error.aspx", false);
 
             }
         }

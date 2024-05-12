@@ -41,7 +41,7 @@ namespace Presentacion
             catch (Exception ex)
             {
 
-                Session.Add("error", ex.ToString());
+                Session.Add("error", Seguridad.manejoError(ex));
                 Response.Redirect("Error.aspx", false);
             }
 
@@ -61,7 +61,7 @@ namespace Presentacion
             catch (Exception ex)
             {
 
-                Session.Add("error", ex.ToString());
+                Session.Add("error", Seguridad.manejoError(ex));
                 Response.Redirect("Error.aspx", false);
             }
         }
@@ -107,13 +107,15 @@ namespace Presentacion
             }
             catch (Exception ex)
             {
-                Session.Add("error", ex.ToString());
+                Session.Add("error", Seguridad.manejoError(ex));
                 Response.Redirect("Error.aspx", false);
             }
 
 
         }
 
+
+        //METODO QUE NO FUNCIONO PARA CARGAR IMG POR DEFAULT
         protected void repRepetidor_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
         //    string imgDefault = "https://www.nycourts.gov/courts/ad4/assets/Placeholder.png";
@@ -126,9 +128,9 @@ namespace Presentacion
         //        imgArticulo.ImageUrl = imgDefault;
         //        if (!(string.IsNullOrEmpty(articulo.UrlImagen)))
         //        {
-        //            imgArticulo.ImageUrl = articulo.UrlImagen;  
+        //            imgArticulo.ImageUrl = articulo.UrlImagen;
         //        }
-              
+
         //    }
         }
     }

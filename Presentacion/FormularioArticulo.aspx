@@ -54,6 +54,9 @@
         </div>
     </div>
     <div class="row">
+        <asp:Label Text="" CssClass="form-label" ID="lblMensaje" runat="server" />
+    </div>
+    <div class="row">
         <div class="col-6">
             <div class="mb-3">
                 <asp:Button ID="btnCancelar" Text="Cancelar" CssClass="btn btn-danger" OnClick="btnCancelar_Click" runat="server" />

@@ -11,6 +11,9 @@ namespace Presentacion
 {
     public partial class MiPerfil : System.Web.UI.Page
     {
+        public bool EliminarUsuario {  get; set; }
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -31,8 +34,8 @@ namespace Presentacion
             }
             catch (Exception ex)
             {
-
-                throw;
+                Session.Add("error", Seguridad.manejoError(ex));
+                Response.Redirect("Error.aspx", false);
             }
         }
 
@@ -56,18 +59,52 @@ namespace Presentacion
                     txtImagen.PostedFile.SaveAs(ruta + "perfil-" + usuario.Id + ".jpg");
 
                     usuario.UrlImagenPerfil = "perfil-" + usuario.Id + ".jpg";
+
                 }
 
                 negocio.actualizar(usuario);
-
-                Image img = (Image)Master.FindControl("imgAvatar");
-                img.ImageUrl = "~/Images/" + usuario.UrlImagenPerfil;
+                if (!string.IsNullOrEmpty(usuario.UrlImagenPerfil))
+                {
+                    Image img = (Image)Master.FindControl("imgAvatar");
+                    img.ImageUrl = "~/Images/" + usuario.UrlImagenPerfil;
+                    imgNuevoPerfil.ImageUrl = "~/Images/" + usuario.UrlImagenPerfil;
+                }
+                   
 
             }
             catch (Exception ex)
             {
+                Session.Add("error", Seguridad.manejoError(ex));
+                Response.Redirect("Error.aspx", false);
+            }
+        }
 
-                Session.Add("error", ex.ToString());
+        protected void btnEliminarUsuario_Click(object sender, EventArgs e)
+        {
+            EliminarUsuario = true;
+        }
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if (chkConfirmarEliminacion.Checked)
+                {
+                    Usuario usuario = (Usuario)Session["usuario"];
+                    int id = usuario.Id;
+                    UsuarioNegocio negocio = new UsuarioNegocio();
+                    negocio.eliminarUsuario(id);
+                    Session.Clear();
+                    Response.Redirect("Default.aspx", false);
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Session.Add("error", Seguridad.manejoError(ex));
+                Response.Redirect("Error.aspx", false);
             }
         }
     }

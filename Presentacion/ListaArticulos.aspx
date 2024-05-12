@@ -53,6 +53,8 @@
             <div class="mb-3">
                 <asp:Label Text="Filtro" ID="lblFiltroAvanzado" runat="server" />
                 <asp:TextBox runat="server" ID="txtFiltroAvanzado" CssClass="form-control" />
+                <%--<asp:RegularExpressionValidator CssClass="advertencia" ErrorMessage="Debes colocar un valor válido para el precio" ValidationExpression="r'^\d{1,3}(?:[,.]\d{3})*([,.]\d{2})?$'" ControlToValidate="txtFiltroAvanzado" runat="server" />--%>
+
             </div>
         </div>
         <div class="col-3"></div>
@@ -61,7 +63,12 @@
         <div class="col-3">
             <div class="mb-3">
                 <asp:Button Text="Buscar" ID="btnBuscar" CssClass="btn btn-primary" OnClick="btnBuscar_Click" runat="server" />
+                 
             </div>
+           
+        </div>
+        <div class="col-6">
+            <asp:Label  CssClass="advertencia" ID="lblAdvertencia"  runat="server" />
         </div>
     </div>
 
@@ -93,7 +100,7 @@
 
 
 
-    <asp:Label ID="lblSuspendidos" CssClass="Advertencia" runat="server" />
+    <asp:Label ID="lblSuspendidos" CssClass="advertencia" runat="server" />
 
     <%if (Negocio.Seguridad.esAdmin(Session["usuario"]))
         {%>

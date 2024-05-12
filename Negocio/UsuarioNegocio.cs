@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Dominio;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Data.SqlClient;
 
 namespace Negocio
 {
@@ -61,6 +62,27 @@ namespace Negocio
             }
         }
 
+        public void eliminarUsuario(int id)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("delete from USERS where id = @id");
+                datos.setearParametro("@id", id);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
         public bool Login(Usuario usuario)
         {
             AccesoDatos datos = new AccesoDatos();
@@ -94,6 +116,34 @@ namespace Negocio
             finally
             {
                 datos.cerrarConexion();
+            }
+        }
+
+        public bool usuarioExistente(Usuario usuario)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+
+
+                datos.setearConsulta("SELECT * FROM USERS WHERE email = @email");
+                datos.setearParametro("@email", usuario.Email);
+                datos.ejecutarLectura();
+
+
+
+                if (datos.Lector.Read())
+                    return true;
+                else
+                    return false;
+                 
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
             }
         }
     }

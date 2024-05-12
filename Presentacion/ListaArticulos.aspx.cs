@@ -27,7 +27,7 @@ namespace Presentacion
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lblAdvertencia.Visible = false;
             lblSuspendidos.Visible = false;
             //FiltroAvanzado = chkAvanzado.Checked;
             if (!IsPostBack)
@@ -39,7 +39,7 @@ namespace Presentacion
         public void dgvArticulos_SelectedIndexChanged(object sender, EventArgs e)
         {
             string id = dgvArticulos.SelectedDataKey.Value.ToString();
-            //Response.Redirect("FormularioPokemon.aspx?id=" + id);
+            
         }
 
 
@@ -69,80 +69,97 @@ namespace Presentacion
 
         protected void ddlCampo_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            if (ddlCampo.SelectedItem != null)
+            try
             {
-                txtFiltroAvanzado.Visible = false;
-                lblFiltroAvanzado.Visible = false;
-
-                string opcion = ddlCampo.SelectedItem.Text;
-                switch (opcion)
+                if (ddlCampo.SelectedItem != null)
                 {
+                    txtFiltroAvanzado.Visible = false;
+                    lblFiltroAvanzado.Visible = false;
 
-                    case "Precio":
-                        txtFiltroAvanzado.Visible = true;
-                        lblFiltroAvanzado.Visible = true;
-                        ddlCriterio.DataSource = null;
-                        ddlCriterio.Items.Clear();
-                        ddlCriterio.Items.Add("Igual a");
-                        ddlCriterio.Items.Add("Mayor a");
-                        ddlCriterio.Items.Add("Menor a");
-                        break;
+                    string opcion = ddlCampo.SelectedItem.Text;
+                    switch (opcion)
+                    {
 
-                    case "Marca":
-                        txtFiltroAvanzado.Visible = false;
-                        lblFiltroAvanzado.Visible = false;
-                        ddlCriterio.DataSource = null;
-                        ddlCriterio.Items.Clear();
-                        MarcaNegocio marcaNegocio = new MarcaNegocio();
-                        ddlCriterio.DataSource = marcaNegocio.listar();
-                        ddlCriterio.DataBind();
-                        break;
+                        case "Precio":
+                            txtFiltroAvanzado.Visible = true;
+                            lblFiltroAvanzado.Visible = true;
+                            ddlCriterio.DataSource = null;
+                            ddlCriterio.Items.Clear();
+                            ddlCriterio.Items.Add("Igual a");
+                            ddlCriterio.Items.Add("Mayor a");
+                            ddlCriterio.Items.Add("Menor a");
+                            break;
 
-                    case "Categoría":
-                        txtFiltroAvanzado.Visible = false;
-                        lblFiltroAvanzado.Visible = false;
-                        ddlCriterio.DataSource = null;
-                        ddlCriterio.Items.Clear();
-                        CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
-                        ddlCriterio.DataSource = categoriaNegocio.listar();
-                        ddlCriterio.DataBind();
-                        break;
+                        case "Marca":
+                            txtFiltroAvanzado.Visible = false;
+                            lblFiltroAvanzado.Visible = false;
+                            ddlCriterio.DataSource = null;
+                            ddlCriterio.Items.Clear();
+                            MarcaNegocio marcaNegocio = new MarcaNegocio();
+                            ddlCriterio.DataSource = marcaNegocio.listar();
+                            ddlCriterio.DataBind();
+                            break;
 
-                    default:
-                        ddlCriterio.SelectedIndex = 0;
-                        break;
+                        case "Categoría":
+                            txtFiltroAvanzado.Visible = false;
+                            lblFiltroAvanzado.Visible = false;
+                            ddlCriterio.DataSource = null;
+                            ddlCriterio.Items.Clear();
+                            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+                            ddlCriterio.DataSource = categoriaNegocio.listar();
+                            ddlCriterio.DataBind();
+                            break;
 
+                        default:
+                            ddlCriterio.SelectedIndex = 0;
+                            break;
+
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                Session.Add("error", Seguridad.manejoError(ex));
+                Response.Redirect("Error.aspx", false);
+            }
+            
         }
 
         private bool validarFiltro()
         {
             Validaciones validar = new Validaciones();
+
+            if (ddlCampo.SelectedIndex <= 0)
+            {
+                lblAdvertencia.Visible = true;
+                lblAdvertencia.Text = "Selecciona el campo para filtrar";
+                //Page.ClientScript.RegisterStartupScript(this.GetType(), "AlertBox", "alert('Selecciona el campo para filtrar');", true); //alerta de JS
+                return true;
+            }
+
+
             if (ddlCampo.SelectedItem.ToString() == "Precio")
             {
-                if (ddlCampo.SelectedIndex <= 0)
+                txtFiltroAvanzado.Text = txtFiltroAvanzado.Text.Replace(',', '.');
+
+                if (!decimal.TryParse(txtFiltroAvanzado.Text, System.Globalization.NumberStyles.Float, CultureInfo.InvariantCulture, out decimal valor))
                 {
-                    Page.ClientScript.RegisterStartupScript(this.GetType(), "AlertBox", "alert('Selecciona el campo para filtrar');", true); //alerta de JS
+                    lblAdvertencia.Visible = true;
+                    lblAdvertencia.Text = "Formato de precio inválido";
+                    //Page.ClientScript.RegisterStartupScript(this.GetType(), "AlertBox", "alert('Formato de precio inválido');");
                     return true;
                 }
-                if (ddlCampo.SelectedItem.Value.ToString() == "Precio")
+                if (validar.validarPrecio(txtFiltroAvanzado.Text))
                 {
-                    txtFiltroAvanzado.Text = txtFiltroAvanzado.Text.Replace(',', '.');
-
-                    if (!decimal.TryParse(txtFiltroAvanzado.Text, System.Globalization.NumberStyles.Float, CultureInfo.InvariantCulture, out decimal valor))
-                    {
-                        Page.ClientScript.RegisterStartupScript(this.GetType(), "AlertBox", "alert('Formato de precio inválido');");
-                        return true;
-                    }
-                    if (validar.validarPrecio(txtFiltroAvanzado.Text))
-                    {
-                        return true;
-                    }
+                    return true;
                 }
-
             }
+
+            //if (ddlCampo.SelectedItem.ToString() == "Precio")
+            //{
+               
+
+            //}
             return false;
         }
 
@@ -160,8 +177,8 @@ namespace Presentacion
             catch (Exception ex)
             {
 
-                Session.Add("error", ex);
-                Response.Redirect("Error.aspx");
+                Session.Add("error", Seguridad.manejoError(ex));
+                Response.Redirect("Error.aspx", false);
             }
         }
 
@@ -191,7 +208,8 @@ namespace Presentacion
             catch (Exception ex)
             {
 
-                Session.Add("error", ex.ToString());
+                Session.Add("error", Seguridad.manejoError(ex));
+                Response.Redirect("Error.aspx", false);
             }
 
 
@@ -215,44 +233,63 @@ namespace Presentacion
                         int id = Convert.ToInt32(dgvArticulos.SelectedDataKey.Value);
                         ArticuloNegocio negocio = new ArticuloNegocio();
                         negocio.eliminar(id);
+                        cargarDGV();
                     }
                 }
             }
             catch (Exception ex)
             {
 
-                Session.Add("error", ex.ToString());
-                Response.Redirect("Error.aspx", false );
+                Session.Add("error", Seguridad.manejoError(ex));
+                Response.Redirect("Error.aspx", false);
             }
         }
 
         protected void btnSuspender_Click(object sender, EventArgs e)
         {
-            if (dgvArticulos.SelectedDataKey != null && dgvArticulos.SelectedDataKey.Value != null)
+            try
             {
-                int id = Convert.ToInt32(dgvArticulos.SelectedDataKey.Value);
-                ArticuloNegocio negocio = new ArticuloNegocio();
-                negocio.suspender(id);
-                cargarDGV();
-                lblSuspendidos.Text = "El artículo que desactivaste ingresó a la lista de artículos suspendidos, selecciona activar para volverlo a la línea de venta.";
-                lblSuspendidos.Visible = true;
+                if (dgvArticulos.SelectedDataKey != null && dgvArticulos.SelectedDataKey.Value != null)
+                {
+                    int id = Convert.ToInt32(dgvArticulos.SelectedDataKey.Value);
+                    ArticuloNegocio negocio = new ArticuloNegocio();
+                    negocio.suspender(id);
+                    cargarDGV();
+                    lblSuspendidos.Text = "El artículo que desactivaste ingresó a la lista de artículos suspendidos, selecciona activar para volverlo a la línea de venta.";
+                    lblSuspendidos.Visible = true;
+                }
             }
+            catch (Exception ex)
+            {
+                Session.Add("error", Seguridad.manejoError(ex));
+                Response.Redirect("Error.aspx", false);
+            }
+           
         }
 
         protected void btnActivar_Click(object sender, EventArgs e)
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-            List<Articulo> listaSuspendidos = negocio.listarSuspendidos();
-            if (listaSuspendidos.Count > 0)
+            try
             {
-                Session.Add("listaArticulosDesactivados", listaSuspendidos);
-                Response.Redirect("ListaDesactivados.aspx", false);
+                ArticuloNegocio negocio = new ArticuloNegocio();
+                List<Articulo> listaSuspendidos = negocio.listarSuspendidos();
+                if (listaSuspendidos.Count > 0)
+                {
+                    Session.Add("listaArticulosDesactivados", listaSuspendidos);
+                    Response.Redirect("ListaDesactivados.aspx", false);
+                }
+                else
+                {
+                    lblSuspendidos.Text = "No hay artículos suspendidos en este momento.";
+                    lblSuspendidos.Visible = true;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                lblSuspendidos.Text = "No hay artículos suspendidos en este momento.";
-                lblSuspendidos.Visible = true;
+                Session.Add("error", Seguridad.manejoError(ex));
+                Response.Redirect("Error.aspx", false);
             }
+            
                 
         }
 
@@ -272,8 +309,8 @@ namespace Presentacion
             }
             catch (Exception ex)
             {
-
-                Session.Add("error", ex.ToString());
+                Session.Add("error", Seguridad.manejoError(ex));
+                Response.Redirect("Error.aspx", false);
             }
         }
 
@@ -281,17 +318,21 @@ namespace Presentacion
         {
             try
             {
-                Usuario User = (Usuario)Session["usuario"];
-                int idArticulo = Convert.ToInt32(dgvArticulos.SelectedDataKey.Value);
-                int idUser = User.Id;
-                FavoritoNegocio favoritoNegocio = new FavoritoNegocio();
-                favoritoNegocio.agregarFavorito(idUser, idArticulo);
+                if (dgvArticulos.SelectedDataKey != null && dgvArticulos.SelectedDataKey.Value != null)
+                {
+
+                    Usuario User = (Usuario)Session["usuario"];
+                    int idArticulo = Convert.ToInt32(dgvArticulos.SelectedDataKey.Value);
+                    int idUser = User.Id;
+                    FavoritoNegocio favoritoNegocio = new FavoritoNegocio();
+                    favoritoNegocio.agregarFavorito(idUser, idArticulo);
+                }
+
             }
             catch (Exception ex)
             {
-
-                Session.Add("error", ex.ToString());
-                Response.Redirect("Error.aspx");
+                Session.Add("error", Seguridad.manejoError(ex));
+                Response.Redirect("Error.aspx", false);
             }
         }
     }
