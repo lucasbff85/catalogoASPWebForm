@@ -219,7 +219,24 @@ namespace Presentacion
 
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
-            ConfirmaEliminacion = true;
+
+            try
+            {
+                if (dgvArticulos.SelectedDataKey != null && dgvArticulos.SelectedDataKey.Value != null)
+                {
+                    ConfirmaEliminacion = true;
+                }
+                else
+                    return;
+            }
+            catch (Exception ex)
+            {
+
+                Session.Add("error", Seguridad.manejoError(ex));
+                Response.Redirect("Error.aspx", false);
+            }
+
+            
         }
 
         protected void btnConfirmarEliminacion_Click(object sender, EventArgs e)
@@ -255,7 +272,7 @@ namespace Presentacion
                     ArticuloNegocio negocio = new ArticuloNegocio();
                     negocio.suspender(id);
                     cargarDGV();
-                    lblSuspendidos.Text = "El artículo que desactivaste ingresó a la lista de artículos suspendidos, selecciona activar para volverlo a la línea de venta.";
+                    lblSuspendidos.InnerText = "El artículo que desactivaste ingresó a la lista de artículos suspendidos, selecciona activar para volverlo a la línea de venta.";
                     lblSuspendidos.Visible = true;
                 }
             }
@@ -280,7 +297,7 @@ namespace Presentacion
                 }
                 else
                 {
-                    lblSuspendidos.Text = "No hay artículos suspendidos en este momento.";
+                    lblSuspendidos.InnerText = "No hay artículos suspendidos en este momento.";
                     lblSuspendidos.Visible = true;
                 }
             }

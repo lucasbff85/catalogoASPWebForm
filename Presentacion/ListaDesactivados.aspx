@@ -26,8 +26,8 @@
                 <asp:TextBox ID="txtNuevoPrecio" CssClass="form-control" runat="server" />
             </div>
             <div class="mb-3">
-                <asp:Button Text="Cancelar" ID="btnCancelar" OnClick="btnCancelar_Click" runat="server" />
-                <asp:Button Text="Aceptar" ID="btnAceptar" OnClick="btnAceptar_Click" runat="server" />
+                <asp:Button Text="Cancelar" ID="btnCancelar" CssClass="btn btn-danger" OnClick="btnCancelar_Click" runat="server" />
+                <asp:Button Text="Aceptar" ID="btnAceptar" CssClass="btn btn-primary" OnClick="btnAceptar_Click" runat="server" />
                 <asp:Label ID="lblSuspendidos" Visible="false" CssClass="Advertencia" runat="server" />
             </div>
         </div>

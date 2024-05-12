@@ -67,12 +67,12 @@
     <div class="row">
         <div class="col-md-4">
             <asp:Button Text="Guardar" CssClass="btn btn-primary" ID="btnGuardar" OnClientClick="return validar()" OnClick="btnGuardar_Click" runat="server" />
-            <asp:Button Text="Eliminar mi usuario" CssClass="btn btn-danger" ID="btnEliminarUsuario" OnClick="btnEliminarUsuario_Click" runat="server" />
+            <asp:Button Text="Eliminar usuario" CssClass="btn btn-danger" ID="btnEliminarUsuario" OnClick="btnEliminarUsuario_Click" runat="server" />
         </div>
         <%if (EliminarUsuario) {  %>
         <div class="row">
             <div class="col-md-4">
-                <asp:CheckBox Text="Confirmar Eliminación" ID="chkConfirmarEliminacion" runat="server" />
+                <asp:CheckBox Text="Confirmar Eliminación" CssClass="btn btn-danger" ID="chkConfirmarEliminacion" runat="server" />
                 <asp:Button Text="Eliminar" ID="btnEliminar" OnClick="btnEliminar_Click" runat="server" />
             </div>
         </div>

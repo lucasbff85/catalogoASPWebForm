@@ -54,7 +54,6 @@
                 <asp:Label Text="Filtro" ID="lblFiltroAvanzado" runat="server" />
                 <asp:TextBox runat="server" ID="txtFiltroAvanzado" CssClass="form-control" />
                 <%--<asp:RegularExpressionValidator CssClass="advertencia" ErrorMessage="Debes colocar un valor válido para el precio" ValidationExpression="r'^\d{1,3}(?:[,.]\d{3})*([,.]\d{2})?$'" ControlToValidate="txtFiltroAvanzado" runat="server" />--%>
-
             </div>
         </div>
         <div class="col-3"></div>
@@ -63,19 +62,19 @@
         <div class="col-3">
             <div class="mb-3">
                 <asp:Button Text="Buscar" ID="btnBuscar" CssClass="btn btn-primary" OnClick="btnBuscar_Click" runat="server" />
-                 
+
             </div>
-           
+
         </div>
         <div class="col-6">
-            <asp:Label  CssClass="advertencia" ID="lblAdvertencia"  runat="server" />
+            <asp:Label CssClass="advertencia" ID="lblAdvertencia" runat="server" />
         </div>
     </div>
 
     <%} %>
 
 
-    <asp:GridView runat="server" AutoPostBack="true" ID="dgvArticulos" SelectedRowStyle-BackColor="Yellow" CssClass="table" AutoGenerateColumns="false" DataKeyNames="Id"
+    <asp:GridView runat="server" AutoPostBack="true" ID="dgvArticulos" SelectedRowStyle-BackColor="Yellow" CssClass="table catalogo" AutoGenerateColumns="false" DataKeyNames="Id"
         OnSelectedIndexChanged="dgvArticulos_SelectedIndexChanged" OnPageIndexChanging="dgvArticulos_PageIndexChanging"
         AllowPaging="true" PageSize="5" SelectedRowStyle-Font-Bold="true" SelectedRowStyle-CssClass="table selected" SelectedRowStyle-ForeColor="#08F008">
         <Columns>
@@ -99,8 +98,10 @@
     </div>
 
 
-
-    <asp:Label ID="lblSuspendidos" CssClass="advertencia" runat="server" />
+    <label id="lblSuspendidos" runat="server" style="font-size: 1.5rem; color: red; font-style: italic;"
+        class="advertencia">
+    </label>
+   
 
     <%if (Negocio.Seguridad.esAdmin(Session["usuario"]))
         {%>

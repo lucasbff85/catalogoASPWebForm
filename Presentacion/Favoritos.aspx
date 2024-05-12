@@ -6,16 +6,14 @@
             max-width: 100%;
             height: 400px;
         }
-
     </style>
 
-     <script>
-        function ImagenDefecto()
-        {
-            this.onerror=null; 
+    <script>
+        function ImagenDefecto() {
+            this.onerror = null;
             this.src = 'https://img.freepik.com/vector-premium/icono-marco-fotos-foto-vacia-blanco-vector-sobre-fondo-transparente-aislado-eps-10_399089-1290.jpg?w=740';
         }
-     </script>
+    </script>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -45,8 +43,11 @@
                         <div class="card-body">
                             <h5 class="card-title"><%#Eval("Nombre") %></h5>
                             <p class="card-text"><%#Eval("Descripcion") %></p>
-                            <asp:Button ID="btnDetalle" runat="server" CssClass="btn btn-primary" OnClick="btnDetalle_Click" Text="Detalle" CommandArgument='<%#Eval("Id") %>' CommandName="articuloId" />
-                            <asp:Button ID="btnEliminarFavorito" runat="server" CssClass="btn btn-danger" OnClick="btnEliminarFavorito_Click" Text="Eliminar Favorito" CommandArgument='<%#Eval("Id") %>' CommandName="articuloId" />
+                            <div class="card-bottom">
+                                <asp:Button ID="btnDetalle" runat="server" CssClass="btn btn-primary" OnClick="btnDetalle_Click" Text="Detalle" CommandArgument='<%#Eval("Id") %>' CommandName="articuloId" />
+                                <asp:Button ID="btnEliminarFavorito" runat="server" CssClass="btn btn-danger" OnClick="btnEliminarFavorito_Click" Text="Eliminar Favorito" CommandArgument='<%#Eval("Id") %>' CommandName="articuloId" />
+                            </div>
+
                         </div>
                     </div>
                 </div>
